@@ -1,0 +1,43 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="col-lg-12">
+    <div class="container">
+        <div class="row" id="head">
+
+            <h4 id="time">Movie Quiz <span id="timeP"></span></h4>
+            <h4 id="score">score: <span id="scoreP"></span></h4>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="container">
+        <div class="row" id="quote">
+            <br />
+            <h2 id="text"><?php echo $quiz->quote; ?></h2>
+            <br />
+            <hr class="linelong" />
+            <br />
+            <div>
+                <button type="button" class="btn custom-btn" id="A"><p id ="A1"></p></button>
+                <button type="button" class="btn custom-btn" id="B"><p id ="B1"></button>
+                <br />
+                <button type="button" class="btn custom-btn" id="C"><p id ="C1"></p></button>
+                <button type="button" class="btn custom-btn" id="D"><p id ="D1"></p></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="hidden">
+    <div id="correct"><?php echo $quiz->movie; ?></div>
+    <div class="wrong"><?php echo $wrong[0]["movie"]; ?></div>
+    <div class="wrong"><?php echo $wrong[1]["movie"]; ?></div>
+    <div class="wrong"><?php echo $wrong[2]["movie"]; ?></div>
+</div>
